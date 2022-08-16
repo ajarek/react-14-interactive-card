@@ -133,10 +133,13 @@ class Card extends React.Component {
       this.state.fullData.valueMonth = this.state.inputValueMonth;
       this.state.fullData.valueYear = this.state.inputValueYear;
       this.state.fullData.valueCvc = this.state.inputValueCvc;
-    }
+    
     this.setState({ fullData: this.state.fullData });
     this.setState({ class: "form-hide" });
     this.setState({ classBoard: "boardData" });
+    } else {
+      this.setState({ class: "form" });
+    }
   };
 
   refreshPage = (e) => {
